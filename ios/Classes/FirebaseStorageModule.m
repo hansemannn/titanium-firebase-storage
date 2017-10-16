@@ -24,15 +24,15 @@
 
 - (NSString *)moduleId
 {
-	return @"firebase.storage";
+  return @"firebase.storage";
 }
 
 #pragma mark Lifecycle
 
 - (void)startup
 {
-	[super startup];
-	NSLog(@"[DEBUG] %@ loaded",self);
+  [super startup];
+  NSLog(@"[DEBUG] %@ loaded", self);
 }
 
 #pragma mark Internal
@@ -42,9 +42,9 @@
   if (_storageURL == nil) {
     return [FIRStorage storage];
   }
-  
-  // TODO: Expose 
-  
+
+  // TODO: Expose FIRApp usage as well
+
   return [FIRStorage storageWithURL:_storageURL.absoluteString];
 }
 
@@ -56,7 +56,7 @@
     [FIRApp configure];
     return;
   }
-  
+
   // TODO: Expose options
   __unused NSDictionary *options = [arguments objectAtIndex:0];
   [FIRApp configureWithOptions:FIROptions.defaultOptions];

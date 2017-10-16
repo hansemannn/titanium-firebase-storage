@@ -18,7 +18,7 @@
   if (self = [super _initWithPageContext:context]) {
     _reference = reference;
   }
-  
+
   return self;
 }
 
@@ -60,10 +60,10 @@
 - (void)upload:(id)arguments
 {
   ENSURE_SINGLE_ARG(arguments, NSDictionary);
-  
+
   id data = [arguments objectForKey:@"data"];
   KrollCallback *callback = [arguments objectForKey:@"callback"];
-  
+
   if ([data isKindOfClass:[TiBlob class]]) {
     data = [(TiBlob *)data data];
   } else if ([data isKindOfClass:[NSString class]]) {
@@ -71,18 +71,22 @@
   }
 
   FIRStorageUploadTask *task = nil;
-  
-  typedef void(^UploadCompletionHandler)(FIRStorageMetadata *metadata, NSError *error);
-  
+
+  typedef void (^UploadCompletionHandler)(FIRStorageMetadata *metadata, NSError *error);
+
   UploadCompletionHandler uploadCompletion = ^(FIRStorageMetadata *metadata, NSError *error) {
     if (error != nil) {
-      [callback call:@[@{ @"success": NUMBOOL(NO), @"error": error.localizedDescription }] thisObject:self];
+      [callback call:@[ @{ @"success" : NUMBOOL(NO),
+        @"error" : error.localizedDescription } ]
+          thisObject:self];
       return;
     }
-    
-    [callback call:@[@{ @"success": NUMBOOL(YES), @"downloadURL": metadata.downloadURL.absoluteString }] thisObject:self];
+
+    [callback call:@[ @{ @"success" : NUMBOOL(YES),
+      @"downloadURL" : metadata.downloadURL.absoluteString } ]
+        thisObject:self];
   };
-  
+
   if ([data isKindOfClass:[TiBlob class]]) {
     [_reference putData:[(TiBlob *)data data]
                metadata:nil
@@ -94,52 +98,62 @@
   } else {
     NSLog(@"[ERROR] Invalid data-type provided, use either Ti.Blob or String!");
   }
-  
+
   [task enqueue];
 }
 
 - (void)download:(id)arguments
 {
   ENSURE_SINGLE_ARG(arguments, NSDictionary);
-  
+
   KrollCallback *callback = [arguments objectForKey:@"callback"];
   NSNumber *maxSize = [arguments objectForKey:@"maxSize"];
 
   [_reference dataWithMaxSize:maxSize.intValue
                    completion:^(NSData *data, NSError *error) {
                      if (error != nil) {
-                       [callback call:@[@{ @"success": NUMBOOL(NO), @"error": error.localizedDescription }] thisObject:self];
+                       [callback call:@[ @{ @"success" : NUMBOOL(NO),
+                         @"error" : error.localizedDescription } ]
+                           thisObject:self];
                        return;
                      }
-                     
-                     [callback call:@[@{ @"success": NUMBOOL(YES), @"data": [[TiBlob alloc] _initWithPageContext:self.pageContext
-                                                                               andData:data
-                                                                              mimetype:@"text/plain"] }] thisObject:self];
+
+                     [callback call:@[ @{ @"success" : NUMBOOL(YES),
+                       @"data" : [[TiBlob alloc] _initWithPageContext:self.pageContext
+                                                              andData:data
+                                                             mimetype:@"text/plain"] } ]
+                         thisObject:self];
                    }];
 }
 
 - (void)delete:(id)arguments
 {
   ENSURE_SINGLE_ARG(arguments, NSDictionary);
-  
+
   KrollCallback *callback = [arguments objectForKey:@"callback"];
-  
+
   [_reference deleteWithCompletion:^(NSError *error) {
-    [callback call:@[@{ @"success": NUMBOOL(error == nil), @"error": NULL_IF_NIL([error localizedDescription]) }] thisObject:self];
+    [callback call:@[ @{ @"success" : NUMBOOL(error == nil),
+      @"error" : NULL_IF_NIL([error localizedDescription]) } ]
+        thisObject:self];
   }];
 }
 
 - (void)getMetadata:(id)callback
 {
   ENSURE_SINGLE_ARG(callback, KrollCallback);
-  
+
   [_reference metadataWithCompletion:^(FIRStorageMetadata *metadata, NSError *error) {
     if (error != nil) {
-      [callback call:@[@{ @"success": NUMBOOL(NO), @"error": error.localizedDescription }] thisObject:self];
+      [callback call:@[ @{ @"success" : NUMBOOL(NO),
+        @"error" : error.localizedDescription } ]
+          thisObject:self];
       return;
     }
-    
-    [callback call:@[@{ @"success": NUMBOOL(YES), @"metadata": [FirebaseUtilities dictionaryFromMetadata:metadata]  }] thisObject:self];
+
+    [callback call:@[ @{ @"success" : NUMBOOL(YES),
+      @"metadata" : [FirebaseUtilities dictionaryFromMetadata:metadata] } ]
+        thisObject:self];
 
   }];
 }

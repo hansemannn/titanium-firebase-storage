@@ -30,7 +30,6 @@
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		DB073CCA1F940EA900E2F9D5 /* FirebaseStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB073CC91F940E8D00E2F9D5 /* FirebaseStorage.framework */; };
 		DB073CCB1F940EA900E2F9D5 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB073CC81F940E8D00E2F9D5 /* GTMSessionFetcher.framework */; };
-		DB073CCD1F940F3700E2F9D5 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB073CCC1F940F3300E2F9D5 /* FirebaseCore.framework */; };
 		DB073CD01F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB073CCE1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h */; };
 		DB073CD11F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB073CCF1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m */; };
 		DB4B81F01F94AB240034B0F6 /* FirebaseUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = DB4B81EE1F94AB240034B0F6 /* FirebaseUtilities.h */; };
@@ -58,7 +57,6 @@
 		D2AAC07E0554694100DB518D /* libfirebase.analytics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfirebase.analytics.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB073CC81F940E8D00E2F9D5 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = platform/GTMSessionFetcher.framework; sourceTree = "<group>"; };
 		DB073CC91F940E8D00E2F9D5 /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseStorage.framework; path = platform/FirebaseStorage.framework; sourceTree = "<group>"; };
-		DB073CCC1F940F3300E2F9D5 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = platform/FirebaseCore.framework; sourceTree = "<group>"; };
 		DB073CCE1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirebaseStorageReferenceProxy.h; path = Classes/FirebaseStorageReferenceProxy.h; sourceTree = "<group>"; };
 		DB073CCF1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FirebaseStorageReferenceProxy.m; path = Classes/FirebaseStorageReferenceProxy.m; sourceTree = "<group>"; };
 		DB4B81EE1F94AB240034B0F6 /* FirebaseUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirebaseUtilities.h; path = Classes/FirebaseUtilities.h; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB073CCD1F940F3700E2F9D5 /* FirebaseCore.framework in Frameworks */,
 				DB073CCA1F940EA900E2F9D5 /* FirebaseStorage.framework in Frameworks */,
 				DB073CCB1F940EA900E2F9D5 /* GTMSessionFetcher.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
@@ -102,7 +99,6 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DB073CCC1F940F3300E2F9D5 /* FirebaseCore.framework */,
 				DB073CC91F940E8D00E2F9D5 /* FirebaseStorage.framework */,
 				DB073CC81F940E8D00E2F9D5 /* GTMSessionFetcher.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
@@ -266,7 +262,7 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -314,7 +310,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/FirebaseStorage.dst;
 				FRAMEWORK_SEARCH_PATHS = (

@@ -14,8 +14,6 @@
 
 #pragma mark Public API's
 
-- (void)configure:(id)arguments;
-
 - (FirebaseStorageReferenceProxy *)referenceForURL:(NSString *)url;
 
 - (FirebaseStorageReferenceProxy *)referenceForPath:(NSString *)path;

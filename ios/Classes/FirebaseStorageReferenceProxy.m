@@ -5,6 +5,8 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
+#import <FirebaseStorage/FirebaseStorage.h>
+
 #import "FirebaseStorageReferenceProxy.h"
 #import "FirebaseUtilities.h"
 #import "TiBlob.h"

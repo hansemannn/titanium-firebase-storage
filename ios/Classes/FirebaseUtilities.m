@@ -5,7 +5,7 @@
 //  Created by Hans Knöchel on 16.10.17.
 //
 
-@import FirebaseStorage;
+#import <FirebaseStorage/FirebaseStorage.h>
 
 #import "FirebaseUtilities.h"
 #import "TiBase.h"

@@ -10,8 +10,7 @@
 #import "TiHost.h"
 #import "TiUtils.h"
 
-@import FirebaseCore;
-@import FirebaseStorage;
+#import <FirebaseStorage/FirebaseStorage.h>
 
 @implementation FirebaseStorageModule
 
@@ -49,18 +48,6 @@
 }
 
 #pragma Public APIs
-
-- (void)configure:(id)arguments
-{
-  if (!arguments || [arguments count] == 0) {
-    [FIRApp configure];
-    return;
-  }
-
-  // TODO: Expose options
-  __unused NSDictionary *options = [arguments objectAtIndex:0];
-  [FIRApp configureWithOptions:FIROptions.defaultOptions];
-}
 
 - (FirebaseStorageReferenceProxy *)referenceForURL:(NSString *)url
 {

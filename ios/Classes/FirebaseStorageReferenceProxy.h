@@ -6,7 +6,7 @@
  */
 #import "TiProxy.h"
 
-@import FirebaseStorage;
+@class FIRStorageReference;
 
 @interface FirebaseStorageReferenceProxy : TiProxy {
   FIRStorageReference *_reference;

@@ -35,6 +35,19 @@
 	NSLog(@"[DEBUG] %@ loaded",self);
 }
 
+#pragma mark Internal
+
+- (FIRStorage *)storage
+{
+  if (_storageURL == nil) {
+    return [FIRStorage storage];
+  }
+  
+  // TODO: Expose 
+  
+  return [FIRStorage storageWithURL:_storageURL.absoluteString];
+}
+
 #pragma Public APIs
 
 - (void)configure:(id)arguments

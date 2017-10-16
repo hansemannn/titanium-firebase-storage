@@ -10,8 +10,6 @@ Use the native  Firebase SDK in Axway Titanium. This repository is part of the [
 
 #### Methods
 
-##### `configure()`
-
 ##### `referenceForURL(url)`
   - `url` (String)
   

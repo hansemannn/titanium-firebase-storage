@@ -62,12 +62,6 @@
   [FIRApp configureWithOptions:FIROptions.defaultOptions];
 }
 
-- (void)setStorageURL:(NSString *)storageURL
-{
-  _storageURL = [NSURL URLWithString:storageURL];
-  [self replaceValue:storageURL forKey:@"storageURL" notification:NO];
-}
-
 - (FirebaseStorageReferenceProxy *)referenceForURL:(NSString *)url
 {
   return [[FirebaseStorageReferenceProxy alloc] _initWithPageContext:self.pageContext
@@ -78,6 +72,12 @@
 {
   return [[FirebaseStorageReferenceProxy alloc] _initWithPageContext:self.pageContext
                                                         andReference:[[FIRStorage storage] referenceWithPath:path]];
+}
+
+- (void)setStorageURL:(NSString *)storageURL
+{
+  _storageURL = [NSURL URLWithString:storageURL];
+  [self replaceValue:storageURL forKey:@"storageURL" notification:NO];
 }
 
 - (void)setMaxUploadRetryTime:(NSNumber *)maxUploadRetryTime

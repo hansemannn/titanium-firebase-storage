@@ -33,6 +33,8 @@
 		DB073CCD1F940F3700E2F9D5 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB073CCC1F940F3300E2F9D5 /* FirebaseCore.framework */; };
 		DB073CD01F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB073CCE1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h */; };
 		DB073CD11F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB073CCF1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m */; };
+		DB4B81F01F94AB240034B0F6 /* FirebaseUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = DB4B81EE1F94AB240034B0F6 /* FirebaseUtilities.h */; };
+		DB4B81F11F94AB240034B0F6 /* FirebaseUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4B81EF1F94AB240034B0F6 /* FirebaseUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		DB073CCC1F940F3300E2F9D5 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = platform/FirebaseCore.framework; sourceTree = "<group>"; };
 		DB073CCE1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirebaseStorageReferenceProxy.h; path = Classes/FirebaseStorageReferenceProxy.h; sourceTree = "<group>"; };
 		DB073CCF1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FirebaseStorageReferenceProxy.m; path = Classes/FirebaseStorageReferenceProxy.m; sourceTree = "<group>"; };
+		DB4B81EE1F94AB240034B0F6 /* FirebaseUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirebaseUtilities.h; path = Classes/FirebaseUtilities.h; sourceTree = "<group>"; };
+		DB4B81EF1F94AB240034B0F6 /* FirebaseUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirebaseUtilities.m; path = Classes/FirebaseUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DB4B81EE1F94AB240034B0F6 /* FirebaseUtilities.h */,
+				DB4B81EF1F94AB240034B0F6 /* FirebaseUtilities.m */,
 				24DE9E0F11C5FE74003F90F6 /* FirebaseStorageModuleAssets.h */,
 				24DE9E1011C5FE74003F90F6 /* FirebaseStorageModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* FirebaseStorageModule.h */,
@@ -138,6 +144,7 @@
 				AA747D9F0F9514B9006C5449 /* FirebaseStorage_Prefix.pch in Headers */,
 				DB073CD01F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h in Headers */,
 				24DD6CF91134B3F500162E58 /* FirebaseStorageModule.h in Headers */,
+				DB4B81F01F94AB240034B0F6 /* FirebaseUtilities.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* FirebaseStorageModuleAssets.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,7 +177,7 @@
 			attributes = {
 				LastUpgradeCheck = 0900;
 			};
-			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "titanium-firebase-analytics" */;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "titanium-firebase-storage" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -215,6 +222,7 @@
 				DB073CD11F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m in Sources */,
 				24DD6CFA1134B3F500162E58 /* FirebaseStorageModule.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* FirebaseStorageModuleAssets.m in Sources */,
+				DB4B81F11F94AB240034B0F6 /* FirebaseUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,7 +475,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "titanium-firebase-analytics" */ = {
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "titanium-firebase-storage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,

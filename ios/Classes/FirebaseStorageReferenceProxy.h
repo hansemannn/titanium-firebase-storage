@@ -30,4 +30,8 @@
 
 - (void)download:(id)arguments;
 
+- (void)delete:(id)arguments;
+
+- (void)getMetadata:(id)callback;
+
 @end

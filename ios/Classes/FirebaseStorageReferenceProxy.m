@@ -6,6 +6,7 @@
  */
 
 #import "FirebaseStorageReferenceProxy.h"
+#import "FirebaseUtilities.h"
 #import "TiBlob.h"
 #import "TiUtils.h"
 
@@ -79,7 +80,7 @@
       return;
     }
     
-    [callback call:@[@{ @"downloadURL": metadata.downloadURL.absoluteString }] thisObject:self];
+    [callback call:@[@{ @"success": NUMBOOL(YES), @"downloadURL": metadata.downloadURL.absoluteString }] thisObject:self];
   };
   
   if ([data isKindOfClass:[TiBlob class]]) {
@@ -111,10 +112,36 @@
                        return;
                      }
                      
-                     [callback call:@[@{ @"data": [[TiBlob alloc] _initWithPageContext:self.pageContext
+                     [callback call:@[@{ @"success": NUMBOOL(YES), @"data": [[TiBlob alloc] _initWithPageContext:self.pageContext
                                                                                andData:data
                                                                               mimetype:@"text/plain"] }] thisObject:self];
                    }];
+}
+
+- (void)delete:(id)arguments
+{
+  ENSURE_SINGLE_ARG(arguments, NSDictionary);
+  
+  KrollCallback *callback = [arguments objectForKey:@"callback"];
+  
+  [_reference deleteWithCompletion:^(NSError *error) {
+    [callback call:@[@{ @"success": NUMBOOL(error == nil), @"error": NULL_IF_NIL([error localizedDescription]) }] thisObject:self];
+  }];
+}
+
+- (void)getMetadata:(id)callback
+{
+  ENSURE_SINGLE_ARG(callback, KrollCallback);
+  
+  [_reference metadataWithCompletion:^(FIRStorageMetadata *metadata, NSError *error) {
+    if (error != nil) {
+      [callback call:@[@{ @"success": NUMBOOL(NO), @"error": error.localizedDescription }] thisObject:self];
+      return;
+    }
+    
+    [callback call:@[@{ @"success": NUMBOOL(YES), @"metadata": [FirebaseUtilities dictionaryFromMetadata:metadata]  }] thisObject:self];
+
+  }];
 }
 
 @end

@@ -12,13 +12,15 @@
   NSURL *_storageURL;
 }
 
-- (void)configure:(id)arguments;
+#pragma mark Public API's
 
-- (void)setStorageURL:(NSString *)storageURL;
+- (void)configure:(id)arguments;
 
 - (FirebaseStorageReferenceProxy *)referenceForURL:(NSString *)url;
 
 - (FirebaseStorageReferenceProxy *)referenceForPath:(NSString *)path;
+
+- (void)setStorageURL:(NSString *)storageURL;
 
 - (void)setMaxUploadRetryTime:(NSNumber *)maxUploadRetryTime;
 

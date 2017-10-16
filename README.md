@@ -1,5 +1,5 @@
-# Firebase Storage Titanium Module
-Use the native  Firebase SDK in Axway Titanium. This repository is part of the [Titanium Firebase](https://github.com/hansemannn/titanium-firebase) project.
+# Firebase Storage - Titanium Module
+Use the native Firebase SDK in Axway Titanium. This repository is part of the [Titanium Firebase](https://github.com/hansemannn/titanium-firebase) project.
 
 ## Requirements
 - [x] Titanium SDK 6.2.0 or later
@@ -51,9 +51,6 @@ Use the native  Firebase SDK in Axway Titanium. This repository is part of the [
 ```js
 // Require the Firebase Storage module
 var FirebaseStorage = require('firebase.storage');
-
-// Configure FirebaseStorage
-FirebaseStorage.configure();
 
 FirebaseStorage.upload({
   data: myBlob,

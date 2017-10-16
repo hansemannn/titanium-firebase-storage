@@ -113,14 +113,11 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DB4B81EE1F94AB240034B0F6 /* FirebaseUtilities.h */,
-				DB4B81EF1F94AB240034B0F6 /* FirebaseUtilities.m */,
 				24DE9E0F11C5FE74003F90F6 /* FirebaseStorageModuleAssets.h */,
 				24DE9E1011C5FE74003F90F6 /* FirebaseStorageModuleAssets.m */,
-				24DD6CF71134B3F500162E58 /* FirebaseStorageModule.h */,
-				24DD6CF81134B3F500162E58 /* FirebaseStorageModule.m */,
-				DB073CCE1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h */,
-				DB073CCF1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m */,
+				DB4B81F41F94B0EA0034B0F6 /* Utilities */,
+				DB4B81F31F94B0E40034B0F6 /* Module */,
+				DB4B81F21F94B0DE0034B0F6 /* Reference */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -132,6 +129,33 @@
 				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		DB4B81F21F94B0DE0034B0F6 /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+				DB073CCE1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h */,
+				DB073CCF1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m */,
+			);
+			name = Reference;
+			sourceTree = "<group>";
+		};
+		DB4B81F31F94B0E40034B0F6 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				24DD6CF71134B3F500162E58 /* FirebaseStorageModule.h */,
+				24DD6CF81134B3F500162E58 /* FirebaseStorageModule.m */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		DB4B81F41F94B0EA0034B0F6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DB4B81EE1F94AB240034B0F6 /* FirebaseUtilities.h */,
+				DB4B81EF1F94AB240034B0F6 /* FirebaseUtilities.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

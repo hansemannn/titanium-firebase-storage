@@ -13,6 +13,6 @@ copyright: Copyright (c) 2017-present by Axway Appcelerator
 # these should not be edited
 name: titanium-firebase-storage
 moduleid: firebase.analytics
-guid: 9800b2f6-460e-4caa-bf9a-35b206c5d3af
+guid: b31cb727-bdea-440a-ba55-9083e4cd7c23
 platform: iphone
 minsdk: 6.2.0.GA

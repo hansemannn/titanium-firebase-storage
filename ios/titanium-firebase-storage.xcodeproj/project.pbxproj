@@ -29,7 +29,6 @@
 		AA747D9F0F9514B9006C5449 /* FirebaseStorage_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* FirebaseStorage_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		DB073CCA1F940EA900E2F9D5 /* FirebaseStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB073CC91F940E8D00E2F9D5 /* FirebaseStorage.framework */; };
-		DB073CCB1F940EA900E2F9D5 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB073CC81F940E8D00E2F9D5 /* GTMSessionFetcher.framework */; };
 		DB073CD01F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB073CCE1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h */; };
 		DB073CD11F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB073CCF1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m */; };
 		DB4B81F01F94AB240034B0F6 /* FirebaseUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = DB4B81EE1F94AB240034B0F6 /* FirebaseUtilities.h */; };
@@ -55,7 +54,6 @@
 		AA747D9E0F9514B9006C5449 /* FirebaseStorage_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseStorage_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libfirebase.analytics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfirebase.analytics.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB073CC81F940E8D00E2F9D5 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = platform/GTMSessionFetcher.framework; sourceTree = "<group>"; };
 		DB073CC91F940E8D00E2F9D5 /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseStorage.framework; path = platform/FirebaseStorage.framework; sourceTree = "<group>"; };
 		DB073CCE1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirebaseStorageReferenceProxy.h; path = Classes/FirebaseStorageReferenceProxy.h; sourceTree = "<group>"; };
 		DB073CCF1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FirebaseStorageReferenceProxy.m; path = Classes/FirebaseStorageReferenceProxy.m; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB073CCA1F940EA900E2F9D5 /* FirebaseStorage.framework in Frameworks */,
-				DB073CCB1F940EA900E2F9D5 /* GTMSessionFetcher.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				DB073CC91F940E8D00E2F9D5 /* FirebaseStorage.framework */,
-				DB073CC81F940E8D00E2F9D5 /* GTMSessionFetcher.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;

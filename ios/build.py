@@ -69,9 +69,9 @@ def generate_doc(config):
 	return documentation
 
 def compile_js(manifest,config):
-	js_file = os.path.join(cwd,'assets','firebase.analytics.js')
+	js_file = os.path.join(cwd,'assets','firebase.storage.js')
 	if not os.path.exists(js_file):
-		js_file = os.path.join(cwd,'..','assets','firebase.analytics.js')
+		js_file = os.path.join(cwd,'..','assets','firebase.storage.js')
 	if not os.path.exists(js_file): return
 
 	from compiler import Compiler

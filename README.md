@@ -4,6 +4,11 @@ Use the native Firebase SDK in Axway Titanium. This repository is part of the [T
 ## Requirements
 - [x] Titanium SDK 6.2.0 or later
 
+
+## Download
+- [x] [Stable release](https://github.com/hansemannn/titanium-firebase-storage/releases)
+- [x] [![gitTio](http://hans-knoechel.de/shields/shield-gittio.svg)](http://gitt.io/component/firebase.storage)
+
 ## API's
 
 ### `FirebaseStorage`

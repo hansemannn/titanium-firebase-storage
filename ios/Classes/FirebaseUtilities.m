@@ -24,11 +24,11 @@
     @"customMetadata" : metadata.customMetadata,
     @"name" : metadata.name,
     @"path" : metadata.path,
-    @"size" : NUMLONG(metadata.size),
+    @"size" : @(metadata.size),
     @"timeCreated" : metadata.timeCreated,
     @"updated" : metadata.updated,
-    @"isFile" : NUMBOOL(metadata.isFile),
-    @"isFolder" : NUMBOOL(metadata.isFolder)
+    @"isFile" : @(metadata.isFile),
+    @"isFolder" : @(metadata.isFolder)
   };
 }
 

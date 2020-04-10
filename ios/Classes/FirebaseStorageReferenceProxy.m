@@ -78,14 +78,14 @@
 
   UploadCompletionHandler uploadCompletion = ^(FIRStorageMetadata *metadata, NSError *error) {
     if (error != nil) {
-      [callback call:@[ @{ @"success" : NUMBOOL(NO),
+      [callback call:@[ @{ @"success" : @(NO),
         @"error" : error.localizedDescription } ]
           thisObject:self];
       return;
     }
 
-    [callback call:@[ @{ @"success" : NUMBOOL(YES),
-      @"downloadURL" : metadata.downloadURL.absoluteString } ]
+    [callback call:@[ @{ @"success" : @(YES),
+      @"metadata" : [FirebaseUtilities dictionaryFromMetadata:metadata] } ]
         thisObject:self];
   };
 
@@ -114,17 +114,16 @@
   [_reference dataWithMaxSize:maxSize.intValue
                    completion:^(NSData *data, NSError *error) {
                      if (error != nil) {
-                       [callback call:@[ @{ @"success" : NUMBOOL(NO),
+                       [callback call:@[ @{ @"success" : @(NO),
                          @"error" : error.localizedDescription } ]
                            thisObject:self];
                        return;
                      }
 
-                     [callback call:@[ @{ @"success" : NUMBOOL(YES),
-                       @"data" : [[TiBlob alloc] _initWithPageContext:self.pageContext
-                                                              andData:data
-                                                             mimetype:@"text/plain"] } ]
-                         thisObject:self];
+                     [callback call:@[ @{
+                       @"success" : @(YES),
+                       @"data" : [[TiBlob alloc] initWithData:data mimetype:@"text/plain"]
+                     } ] thisObject:self];
                    }];
 }
 
@@ -135,7 +134,7 @@
   KrollCallback *callback = [arguments objectForKey:@"callback"];
 
   [_reference deleteWithCompletion:^(NSError *error) {
-    [callback call:@[ @{ @"success" : NUMBOOL(error == nil),
+    [callback call:@[ @{ @"success" : @(error == nil),
       @"error" : NULL_IF_NIL([error localizedDescription]) } ]
         thisObject:self];
   }];
@@ -147,13 +146,13 @@
 
   [_reference metadataWithCompletion:^(FIRStorageMetadata *metadata, NSError *error) {
     if (error != nil) {
-      [callback call:@[ @{ @"success" : NUMBOOL(NO),
+      [callback call:@[ @{ @"success" : @(NO),
         @"error" : error.localizedDescription } ]
           thisObject:self];
       return;
     }
 
-    [callback call:@[ @{ @"success" : NUMBOOL(YES),
+    [callback call:@[ @{ @"success" : @(YES),
       @"metadata" : [FirebaseUtilities dictionaryFromMetadata:metadata] } ]
         thisObject:self];
 

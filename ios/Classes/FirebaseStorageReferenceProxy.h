@@ -28,6 +28,8 @@
 
 - (void)upload:(id)arguments;
 
+- (void)downloadURL:(id)callback;
+
 - (void)download:(id)arguments;
 
 - (void)delete:(id)arguments;

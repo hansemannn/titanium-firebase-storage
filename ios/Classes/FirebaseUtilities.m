@@ -16,17 +16,18 @@
 {
   return @{
     @"bucket" : metadata.bucket,
-    @"cacheControl" : metadata.cacheControl,
-    @"contentDisposition" : metadata.contentDisposition,
-    @"contentEncoding" : metadata.contentEncoding,
-    @"contentLanguage" : metadata.contentLanguage,
-    @"contentType" : metadata.contentType,
-    @"customMetadata" : metadata.customMetadata,
-    @"name" : metadata.name,
-    @"path" : metadata.path,
+    @"cacheControl" : NULL_IF_NIL(metadata.cacheControl),
+    @"contentDisposition" : NULL_IF_NIL(metadata.contentDisposition),
+    @"contentEncoding" : NULL_IF_NIL(metadata.contentEncoding),
+    @"contentLanguage" : NULL_IF_NIL(metadata.contentLanguage),
+    @"contentType" : NULL_IF_NIL(metadata.contentType),
+    @"customMetadata" : NULL_IF_NIL(metadata.customMetadata),
+    @"name" : NULL_IF_NIL(metadata.name),
+    @"path" : NULL_IF_NIL(metadata.path),
+    @"fullPath": NULL_IF_NIL(metadata.storageReference.fullPath),
     @"size" : @(metadata.size),
-    @"timeCreated" : metadata.timeCreated,
-    @"updated" : metadata.updated,
+    @"timeCreated" : NULL_IF_NIL(metadata.timeCreated),
+    @"updated" : NULL_IF_NIL(metadata.updated),
     @"isFile" : @(metadata.isFile),
     @"isFolder" : @(metadata.isFolder)
   };

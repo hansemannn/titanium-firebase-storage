@@ -32,8 +32,10 @@
                                                         andReference:_reference.parent];
 }
 
-- (FirebaseStorageReferenceProxy *)child:(NSString *)path
+- (FirebaseStorageReferenceProxy *)child:(id)path
 {
+  ENSURE_SINGLE_ARG(path, NSString);
+
   return [[FirebaseStorageReferenceProxy alloc] _initWithPageContext:self.pageContext
                                                         andReference:[_reference child:path]];
 }
@@ -66,27 +68,23 @@
   id data = [arguments objectForKey:@"data"];
   KrollCallback *callback = [arguments objectForKey:@"callback"];
 
-  if ([data isKindOfClass:[TiBlob class]]) {
-    data = [(TiBlob *)data data];
-  } else if ([data isKindOfClass:[NSString class]]) {
-    data = [TiUtils toURL:data proxy:self];
-  }
-
   FIRStorageUploadTask *task = nil;
 
   typedef void (^UploadCompletionHandler)(FIRStorageMetadata *metadata, NSError *error);
 
   UploadCompletionHandler uploadCompletion = ^(FIRStorageMetadata *metadata, NSError *error) {
     if (error != nil) {
-      [callback call:@[ @{ @"success" : @(NO),
-        @"error" : error.localizedDescription } ]
-          thisObject:self];
+      [callback call:@[ @{
+        @"success" : @(NO),
+        @"error" : error.localizedDescription
+      } ] thisObject:self];
       return;
     }
 
-    [callback call:@[ @{ @"success" : @(YES),
-      @"metadata" : [FirebaseUtilities dictionaryFromMetadata:metadata] } ]
-        thisObject:self];
+    [callback call:@[ @{
+      @"success" : @(YES),
+      @"metadata" : [FirebaseUtilities dictionaryFromMetadata:metadata]
+    } ] thisObject:self];
   };
 
   if ([data isKindOfClass:[TiBlob class]]) {
@@ -102,6 +100,15 @@
   }
 
   [task enqueue];
+}
+
+- (void)downloadURL:(id)callback
+{
+  ENSURE_SINGLE_ARG(callback, KrollCallback);
+
+  [_reference downloadURLWithCompletion:^(NSURL * _Nullable URL, NSError * _Nullable error) {
+    [callback call:@[@{ @"url": URL.absoluteString }] thisObject:self];
+  }];
 }
 
 - (void)download:(id)arguments

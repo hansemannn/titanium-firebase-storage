@@ -49,14 +49,18 @@
 
 #pragma Public APIs
 
-- (FirebaseStorageReferenceProxy *)referenceForURL:(NSString *)url
+- (FirebaseStorageReferenceProxy *)referenceForURL:(id)url
 {
+  ENSURE_SINGLE_ARG(url, NSString);
+
   return [[FirebaseStorageReferenceProxy alloc] _initWithPageContext:self.pageContext
                                                         andReference:[[FIRStorage storage] referenceForURL:url]];
 }
 
-- (FirebaseStorageReferenceProxy *)referenceForPath:(NSString *)path
+- (FirebaseStorageReferenceProxy *)referenceForPath:(id)path
 {
+  ENSURE_SINGLE_ARG(path, NSString);
+
   return [[FirebaseStorageReferenceProxy alloc] _initWithPageContext:self.pageContext
                                                         andReference:[[FIRStorage storage] referenceWithPath:path]];
 }

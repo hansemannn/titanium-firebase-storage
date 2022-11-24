@@ -5,8 +5,9 @@
  * Copyright (c) 2017 Your Company. All rights reserved.
  */
 
+#import <TitaniumKit/TitaniumKit.h>
+
 #import "FirebaseStorageReferenceProxy.h"
-#import "TiModule.h"
 
 @interface FirebaseStorageModule : TiModule {
   NSURL *_storageURL;

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -26,9 +26,15 @@
 		24DD6CFA1134B3F500162E58 /* FirebaseStorageModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* FirebaseStorageModule.m */; };
 		24DE9E1111C5FE74003F90F6 /* FirebaseStorageModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* FirebaseStorageModuleAssets.h */; };
 		24DE9E1211C5FE74003F90F6 /* FirebaseStorageModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* FirebaseStorageModuleAssets.m */; };
+		3A850A97292FAB2D0097BF56 /* FirebaseStorage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A850A91292FAB2D0097BF56 /* FirebaseStorage.xcframework */; };
+		3A850A98292FAB2D0097BF56 /* FirebaseCoreExtension.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A850A92292FAB2D0097BF56 /* FirebaseCoreExtension.xcframework */; };
+		3A850A99292FAB2D0097BF56 /* FirebaseStorageInternal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A850A93292FAB2D0097BF56 /* FirebaseStorageInternal.xcframework */; };
+		3A850A9A292FAB2D0097BF56 /* FirebaseAuthInterop.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A850A94292FAB2D0097BF56 /* FirebaseAuthInterop.xcframework */; };
+		3A850A9B292FAB2D0097BF56 /* GTMSessionFetcher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A850A95292FAB2D0097BF56 /* GTMSessionFetcher.xcframework */; };
+		3A850A9C292FAB2D0097BF56 /* FirebaseAppCheckInterop.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A850A96292FAB2D0097BF56 /* FirebaseAppCheckInterop.xcframework */; };
+		3A850A9E292FAB410097BF56 /* TitaniumKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A850A9D292FAB410097BF56 /* TitaniumKit.xcframework */; };
 		AA747D9F0F9514B9006C5449 /* FirebaseStorage_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* FirebaseStorage_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		DB073CCA1F940EA900E2F9D5 /* FirebaseStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB073CC91F940E8D00E2F9D5 /* FirebaseStorage.framework */; };
 		DB073CD01F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB073CCE1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h */; };
 		DB073CD11F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB073CCF1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m */; };
 		DB4B81F01F94AB240034B0F6 /* FirebaseUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = DB4B81EE1F94AB240034B0F6 /* FirebaseUtilities.h */; };
@@ -51,10 +57,16 @@
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
 		24DE9E0F11C5FE74003F90F6 /* FirebaseStorageModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirebaseStorageModuleAssets.h; path = Classes/FirebaseStorageModuleAssets.h; sourceTree = "<group>"; };
 		24DE9E1011C5FE74003F90F6 /* FirebaseStorageModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirebaseStorageModuleAssets.m; path = Classes/FirebaseStorageModuleAssets.m; sourceTree = "<group>"; };
+		3A850A91292FAB2D0097BF56 /* FirebaseStorage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseStorage.xcframework; path = platform/FirebaseStorage.xcframework; sourceTree = "<group>"; };
+		3A850A92292FAB2D0097BF56 /* FirebaseCoreExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseCoreExtension.xcframework; path = platform/FirebaseCoreExtension.xcframework; sourceTree = "<group>"; };
+		3A850A93292FAB2D0097BF56 /* FirebaseStorageInternal.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseStorageInternal.xcframework; path = platform/FirebaseStorageInternal.xcframework; sourceTree = "<group>"; };
+		3A850A94292FAB2D0097BF56 /* FirebaseAuthInterop.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseAuthInterop.xcframework; path = platform/FirebaseAuthInterop.xcframework; sourceTree = "<group>"; };
+		3A850A95292FAB2D0097BF56 /* GTMSessionFetcher.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GTMSessionFetcher.xcframework; path = platform/GTMSessionFetcher.xcframework; sourceTree = "<group>"; };
+		3A850A96292FAB2D0097BF56 /* FirebaseAppCheckInterop.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseAppCheckInterop.xcframework; path = platform/FirebaseAppCheckInterop.xcframework; sourceTree = "<group>"; };
+		3A850A9D292FAB410097BF56 /* TitaniumKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TitaniumKit.xcframework; path = "../../../../Library/Application Support/Titanium/mobilesdk/osx/11.1.1.GA/iphone/Frameworks/TitaniumKit.xcframework"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* FirebaseStorage_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseStorage_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libfirebase.storage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfirebase.storage.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB073CC91F940E8D00E2F9D5 /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseStorage.framework; path = platform/FirebaseStorage.framework; sourceTree = "<group>"; };
 		DB073CCE1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirebaseStorageReferenceProxy.h; path = Classes/FirebaseStorageReferenceProxy.h; sourceTree = "<group>"; };
 		DB073CCF1F94105500E2F9D5 /* FirebaseStorageReferenceProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FirebaseStorageReferenceProxy.m; path = Classes/FirebaseStorageReferenceProxy.m; sourceTree = "<group>"; };
 		DB4B81EE1F94AB240034B0F6 /* FirebaseUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirebaseUtilities.h; path = Classes/FirebaseUtilities.h; sourceTree = "<group>"; };
@@ -66,8 +78,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB073CCA1F940EA900E2F9D5 /* FirebaseStorage.framework in Frameworks */,
+				3A850A9C292FAB2D0097BF56 /* FirebaseAppCheckInterop.xcframework in Frameworks */,
+				3A850A9E292FAB410097BF56 /* TitaniumKit.xcframework in Frameworks */,
+				3A850A97292FAB2D0097BF56 /* FirebaseStorage.xcframework in Frameworks */,
+				3A850A99292FAB2D0097BF56 /* FirebaseStorageInternal.xcframework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				3A850A98292FAB2D0097BF56 /* FirebaseCoreExtension.xcframework in Frameworks */,
+				3A850A9A292FAB2D0097BF56 /* FirebaseAuthInterop.xcframework in Frameworks */,
+				3A850A9B292FAB2D0097BF56 /* GTMSessionFetcher.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +114,13 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DB073CC91F940E8D00E2F9D5 /* FirebaseStorage.framework */,
+				3A850A9D292FAB410097BF56 /* TitaniumKit.xcframework */,
+				3A850A96292FAB2D0097BF56 /* FirebaseAppCheckInterop.xcframework */,
+				3A850A94292FAB2D0097BF56 /* FirebaseAuthInterop.xcframework */,
+				3A850A92292FAB2D0097BF56 /* FirebaseCoreExtension.xcframework */,
+				3A850A91292FAB2D0097BF56 /* FirebaseStorage.xcframework */,
+				3A850A93292FAB2D0097BF56 /* FirebaseStorageInternal.xcframework */,
+				3A850A95292FAB2D0097BF56 /* GTMSessionFetcher.xcframework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -191,7 +215,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1400;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "titanium-firebase-storage" */;
 			compatibilityVersion = "Xcode 8.0";
@@ -199,10 +223,7 @@
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				Base,
-				fr,
 				en,
-				de,
-				ja,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* titanium-firebase-storage */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -258,8 +279,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
-				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -284,7 +304,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = (
 					"-DDEBUG",
@@ -306,8 +326,7 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
-				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/FirebaseStorage.dst;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -330,7 +349,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
@@ -348,6 +367,7 @@
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -360,6 +380,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -390,6 +411,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DDEBUG",
@@ -412,6 +434,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -424,6 +447,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -451,7 +475,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = firebase.storage;

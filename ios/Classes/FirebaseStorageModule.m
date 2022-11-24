@@ -5,12 +5,10 @@
  * Copyright (c) 2017 Your Company. All rights reserved.
  */
 
-#import "FirebaseStorageModule.h"
-#import "TiBase.h"
-#import "TiHost.h"
-#import "TiUtils.h"
+#import <TitaniumKit/TitaniumKit.h>
+#import <FirebaseStorage/FirebaseStorage-Swift.h>
 
-#import <FirebaseStorage/FirebaseStorage.h>
+#import "FirebaseStorageModule.h"
 
 @implementation FirebaseStorageModule
 

@@ -2,12 +2,13 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 2.1.0
+version: 3.0.0
 apiversion: 2
-architectures: armv7 arm64 i386 x86_64
+architectures: arm64 x86_64
 description: titanium-firebase-storage
 author: Hans Knoechel
 license: Apache 2
+mac: false
 copyright: Copyright (c) 2017-present by Hans Knoechel
 
 # these should not be edited
@@ -15,4 +16,4 @@ name: titanium-firebase-storage
 moduleid: firebase.storage
 guid: b31cb727-bdea-440a-ba55-9083e4cd7c23
 platform: iphone
-minsdk: 8.0.0
+minsdk: 9.2.0

@@ -5,12 +5,11 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-#import <FirebaseStorage/FirebaseStorage.h>
+#import <TitaniumKit/TitaniumKit.h>
+#import <FirebaseStorage/FirebaseStorage-Swift.h>
 
 #import "FirebaseStorageReferenceProxy.h"
 #import "FirebaseUtilities.h"
-#import "TiBlob.h"
-#import "TiUtils.h"
 
 @implementation FirebaseStorageReferenceProxy
 

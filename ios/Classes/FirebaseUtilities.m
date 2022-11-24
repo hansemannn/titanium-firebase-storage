@@ -5,10 +5,10 @@
 //  Created by Hans Knöchel on 16.10.17.
 //
 
-#import <FirebaseStorage/FirebaseStorage.h>
+#import <TitaniumKit/TitaniumKit.h>
+#import <FirebaseStorage/FirebaseStorage-Swift.h>
 
 #import "FirebaseUtilities.h"
-#import "TiBase.h"
 
 @implementation FirebaseUtilities
 
